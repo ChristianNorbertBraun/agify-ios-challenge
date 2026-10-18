@@ -5,8 +5,7 @@ estimated age from the [agify API](https://agify.io).
 
 ## Beyond the task
 - **Search as you type:** debounced by 0.5s; a new query cancels the running request.
-- **UI polish:** Liquid Glass input field, rolling number animation, haptic feedback,
-  portrait and landscape.
+- **UI polish:** Liquid Glass input field, rolling number animation, haptic feedback.
 - **Rate limit handling:** agify's daily limit is shown with the time until reset.
 
 ## Why so much for a small app?
