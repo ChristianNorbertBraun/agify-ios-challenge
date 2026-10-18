@@ -28,7 +28,7 @@ See CLAUDE.md. Short version: UI on the main actor, services `nonisolated`, real
 | German literals in code, no String Catalog. | `Localizable.xcstrings`, English + German. |
 | Generated Info.plist, placeholder bundle ID, empty launch screen. | Real bundle ID, `UILaunchScreen` with brand colour (Info.plist), app icon. |
 | Pre-commit hook re-stages whole files (partially staged hunks get committed). | Format in CI / check-only hook, or a tool like `lefthook`. |
-| Snapshots for one device, light mode only. | Matrix of devices, dark mode, Dynamic Type sizes; recorded in CI on a pinned simulator. |
+| Snapshots for one scale and iOS version (3×, iOS 27.0), light and dark mode only. | Dynamic Type sizes, several widths (iPhone SE, iPad), recorded in CI on a pinned simulator. |
 | Errors shown as plain text. | Retry action, offline detection, specific copy per error. |
 
 ## Ideas (not implemented)

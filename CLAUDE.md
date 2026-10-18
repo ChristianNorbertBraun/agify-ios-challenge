@@ -50,7 +50,7 @@ xcodebuild -project AgifyApp.xcodeproj -scheme AgifyApp \
 
 ## Tests
 - Few and meaningful: unit tests for logic, snapshot tests for styled components. No tests for initializers.
-- Snapshots are recorded on iPhone 18 Pro (iOS 27.0). Wrap snapshot views in `.withoutAnimations()`.
+- Snapshots are recorded on a 3× iPhone simulator with iOS 27.0 (e.g. iPhone 18 Pro). Other scales or iOS versions produce diffs. Wrap snapshot views in `.withoutAnimations()`.
 
 ## Tooling
 - **SwiftLint** runs on every build via the `SwiftLintPlugins` build tool plugin. Config: `agify-ios-challenge/AgifyApp/.swiftlint.yml`.
