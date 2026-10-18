@@ -1,0 +1,15 @@
+#!/bin/sh
+# Formats staged Swift files with SwiftFormat and re-stages them.
+set -e
+export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
+
+if ! command -v swiftformat >/dev/null; then
+    echo "SwiftFormat is missing: brew install swiftformat"
+    exit 1
+fi
+
+files=$(git diff --cached --name-only --diff-filter=ACMR -- '*.swift')
+[ -z "$files" ] && exit 0
+
+echo "$files" | xargs swiftformat --quiet
+echo "$files" | xargs git add
